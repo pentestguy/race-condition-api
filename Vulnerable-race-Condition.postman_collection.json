@@ -1,0 +1,80 @@
+{
+	"info": {
+		"_postman_id": "6aaf8a34-23f1-4cf0-88f4-5ebce852ab52",
+		"name": "Vulnerable-race-Condition",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31687420"
+	},
+	"item": [
+		{
+			"name": "Check-Balance",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Withdraw",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"account_id\": 1,\n    \"amount\": 10\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://172.17.0.2:5000/withdraw",
+					"protocol": "http",
+					"host": [
+						"172",
+						"17",
+						"0",
+						"2"
+					],
+					"port": "5000",
+					"path": [
+						"withdraw"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Deposit",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"account_id\": 1,\n    \"amount\": 20\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://172.17.0.2:5000/deposit",
+					"protocol": "http",
+					"host": [
+						"172",
+						"17",
+						"0",
+						"2"
+					],
+					"port": "5000",
+					"path": [
+						"deposit"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
